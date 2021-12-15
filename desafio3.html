@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Desafío 3</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    alert("Vamos a calcular el factorial de un número...");
+    let numero = prompt("Decime un número entre 2 y 20 del cual quieras calcular su factorial:");
+    if (numero < 2 || numero > 20) {
+      alert("Lo siento, no puedo hacer esa cuenta.");
+    } else {
+      let factorial = 1;
+      for (var i = 1; i <= numero; i++) {
+        factorial = factorial * i;
+      }
+      alert("El resultado es: " + factorial);
+      }
+  </script>
+</html>
