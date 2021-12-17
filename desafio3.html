@@ -9,8 +9,9 @@
   </body>
   <script type="text/javascript">
     alert("Vamos a calcular el factorial de un número...");
-    let numero = parseInt(prompt("Decime un número entre 2 y 20 del cual quieras calcular su factorial:"));
-    if (numero < 2 || numero > 20) {
+    let numero = prompt("Decime un número entre 2 y 20 del cual quieras calcular su factorial:");
+    //atrapo el error en caso de que el usuario ingrese otra cosa que no sea un número
+    if (numero < 2 || numero > 20 || typeof(numero) === 'string') {
       alert("Lo siento, no puedo hacer esa cuenta.");
     } else {
       let factorial = 1;
