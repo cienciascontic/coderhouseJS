@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -10,51 +11,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Georama:wght@300&family=Geostar+Fill&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <header><h2>GeoCalc</h2></header>
+
     <main>
-<div class="calculadora">
-  <div class="figura">
-<h3>Seleccioná la figura a calcular el área dando clic en el botón correspondiente:</h3>
-<h3 id="textoFigura"></h3>
-  </div>
-  <div class="parametros">
-<span id="textoParametro1"> </span>
-<input type="hidden" id="valorParametro1">
-<br>
-<span id="textoParametro2"> </span>
-<input type="hidden" id="valorParametro2">
-  </div>
-  <div class="">
-    <br>
-    <button type="button" id="botonCalcularCuadrado" onclick="calcularResultadoCuadrado()" style="visibility:hidden">Calcular</button>
-    <button type="button" id="botonCalcularRectangulo" onclick="calcularResultadoRectangulo()" style="visibility:hidden">Calcular</button>
-    <button type="button" id="botonCalcularTriangulo" onclick="calcularResultadoTriangulo()" style="visibility:hidden">Calcular</button>
-  </div>
+      <div class="calculadora">
 
-  <div class="resultado" id="divResultado" style="visibility:hidden">
-<h3>El resultado es:
-  <span id="valorResultadoCuadrado"></span>
-  <span id="valorResultadoRectangulo"></span>
-  <span id="valorResultadoTriangulo"></span>
-</h3>
-  </div>
+            <div class="figura">
+                <h3>Seleccioná la figura a calcular el área dando clic en el botón correspondiente:</h3>
+                <h3 id="textoFigura"></h3>
+            </div>
 
-</div>
+            <div class="parametros">
+                <span id="textoParametro1"> </span>
+                <input type="hidden" id="valorParametro1">
+                <br>
+                <span id="textoParametro2"> </span>
+                <input type="hidden" id="valorParametro2">
+            </div>
 
-<div class="botonera">
+            <div class="botonesCalcular">
+                  <br>
+                  <button type="button" id="botonCalcularCuadrado" onclick="calcularResultadoFigura()" style="visibility:hidden">Calcular</button>
+                  <button type="button" id="botonCalcularRectangulo" onclick="calcularResultadoFigura()" style="visibility:hidden">Calcular</button>
+                  <button type="button" id="botonCalcularTriangulo" onclick="calcularResultadoFigura()" style="visibility:hidden">Calcular</button>
+            </div>
 
-<a href="#" onclick="opcionCuadrado()"><img src="./imgs/boton-cuadrado.png" alt="cuadrado"></a>
-  <a href="#" onclick="opcionRectangulo()"><img src="./imgs/boton-rectangulo.png" alt="rectángulo"></a>
-<a href="#" onclick="opcionTriangulo()"><img src="./imgs/boton-triangulo.png" alt="triángulo"></a>
+            <div class="resultado" id="divResultado" style="visibility:hidden">
+                <h3>El resultado es:
+                  <span id="valorResultadoCuadrado"></span>
+                  <span id="valorResultadoRectangulo"></span>
+                  <span id="valorResultadoTriangulo"></span>
+                </h3>
+            </div>
 
-</div>
+      </div>
+
+        <div class="botoneraFiguras">
+            <a href="#" onclick="elegirFigura()"><img id="imgCuadrado" src="/imgs/boton-cuadrado.png" alt="cuadrado"></a>
+              <a href="#" onclick="elegirFigura()"><img id="imgRectangulo" src="/imgs/boton-rectangulo.png" alt="rectángulo"></a>
+            <a href="#" onclick="elegirFigura()"><img id="imgTriangulo" src="/imgs/boton-triangulo.png" alt="triángulo"></a>
+        </div>
 
     </main>
+
     <footer>
       <h4>Creada por @rizzicristian</h4>
     </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
 
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
