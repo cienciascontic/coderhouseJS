@@ -1,4 +1,5 @@
 let respuestaUsuario;
+let puntajeUsuario = 0;
 
 class Pregunta {
   constructor(idPregunta, categoria, enunciado, opciones = [], opcionCorrecta, tiempo) {
