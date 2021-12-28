@@ -60,10 +60,15 @@ function mostrarPuntajeTotal() {
 alert("Tu puntaje total fue: " + puntajeUsuario + " puntos");
 }
 
-function comenzarJuego() {
-  puntajeUsuario = 0;
-  pregunta1.hacerPregunta();
+pregunta1.hacerPregunta();
   //pregunta1.darResultado();
   pregunta2.hacerPregunta();
   mostrarPuntajeTotal();
-}
+
+// function comenzarJuego() {
+//  puntajeUsuario = 0;
+//  pregunta1.hacerPregunta();
+  //pregunta1.darResultado();
+//  pregunta2.hacerPregunta();
+//  mostrarPuntajeTotal();
+// }
