@@ -56,20 +56,23 @@ class Pregunta {
 
 const pregunta1 = new Pregunta(1,"HIS","¿A qué le temía Bucéfalo?", ["A los rebencazos de su amo", "A los ratones", "A su sombra", "Al agua"], "C", 8000);
 const pregunta2 = new Pregunta(2,"TEC","¿Quién se apellida Torvalds?", ["El creador de Wikipedia", "El creador de Linux", "El creador de Twicth", "El creador del pendrive"], "B", 10000);
+const pregunta3 = new Pregunta(3,"DEP","¿Cuál de estos deportes le otorgó más medallas olímpicas a la Argentina en toda su historia?", ["Hockey sobre césped", "Atletismo", "Tenis", "Boxeo"], "D", 8000);
 
 function mostrarPuntajeTotal() {
 alert("Tu puntaje total fue: " + puntajeUsuario + " puntos");
 }
 
-pregunta1.hacerPregunta();
+// function comenzarJuego() {
+//   puntajeUsuario = 0;
+//   pregunta1.hacerPregunta();
+//   //pregunta1.darResultado();
+//   pregunta2.hacerPregunta();
+//   pregunta3.hacerPregunta();
+//   mostrarPuntajeTotal();
+// }
+
+  pregunta1.hacerPregunta();
   //pregunta1.darResultado();
   pregunta2.hacerPregunta();
+  pregunta3.hacerPregunta();
   mostrarPuntajeTotal();
-
-// function comenzarJuego() {
-//  puntajeUsuario = 0;
-//  pregunta1.hacerPregunta();
-  //pregunta1.darResultado();
-//  pregunta2.hacerPregunta();
-//  mostrarPuntajeTotal();
-// }
