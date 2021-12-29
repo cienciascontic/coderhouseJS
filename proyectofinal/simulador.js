@@ -30,6 +30,9 @@ class Pregunta {
       case "TEC":
       this.categoria = "Tecnología";
       break;
+      case "DEP":
+      this.categoria = "Deportes";
+      break;
       //default:
     }
     let respuestaUsuario = prompt("Categoría: " + this.categoria + "\r\n" + " Pregunta: " + this.enunciado + "\r\n" + "\r\n" + "A. " + this.opciones[0] + "\r\n" + "B. " + this.opciones[1] + "\r\n" + "C. " + this.opciones[2] + "\r\n" + "D. " + this.opciones[3]);
