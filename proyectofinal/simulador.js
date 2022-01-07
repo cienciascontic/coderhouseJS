@@ -49,13 +49,6 @@ class Pregunta {
     }
     // fin de método "hacerPregunta"
 
-    // darResultado() {
-    //   if (this.opcionCorrecta === respuestaUsuario) {
-    //     alert("Tu respuesta es correcta!");
-    //   } else {
-    //     alert("Incorrecto");
-    //   }
-    //}
   }
 
 const pregunta1 = new Pregunta(1,"HIS","https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Alexander_the_Great_mosaic.jpg/250px-Alexander_the_Great_mosaic.jpg","¿A qué le temía Bucéfalo?", ["A los rebencazos de su amo", "A los ratones", "A su sombra", "Al agua"], "C", 8000);
@@ -66,17 +59,9 @@ function mostrarPuntajeTotal() {
 alert("Tu puntaje total fue: " + puntajeUsuario + " puntos");
 }
 
-// function comenzarJuego() {
-//   puntajeUsuario = 0;
-//   pregunta1.hacerPregunta();
-//   //pregunta1.darResultado();
-//   pregunta2.hacerPregunta();
-//   pregunta3.hacerPregunta();
-//   mostrarPuntajeTotal();
-// }
+
 
   pregunta1.hacerPregunta();
-  //pregunta1.darResultado();
   pregunta2.hacerPregunta();
   pregunta3.hacerPregunta();
   mostrarPuntajeTotal();
