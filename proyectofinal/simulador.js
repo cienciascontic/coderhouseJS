@@ -1,5 +1,15 @@
 let respuestaUsuario;
 let puntajeUsuario = 0;
+let indiceAlAzar;
+let preguntaElegida;
+
+function numAleatorio(min, max) {
+  var min = Math.ceil(min);
+  var max = Math.floor(max);
+
+  // El máximo es exclusivo y el mínimo es inclusivo
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 class Pregunta {
   constructor(idPregunta, categoria, ayuda, enunciado, opciones = [], opcionCorrecta, tiempo) {
@@ -59,9 +69,17 @@ function mostrarPuntajeTotal() {
 alert("Tu puntaje total fue: " + puntajeUsuario + " puntos");
 }
 
+let arrayDePreguntas = [];
+arrayDePreguntas = [pregunta1, pregunta2, pregunta3];
 
+  // pregunta1.hacerPregunta();
+  //pregunta2.hacerPregunta();
+  // pregunta3.hacerPregunta();
 
-  pregunta1.hacerPregunta();
-  pregunta2.hacerPregunta();
-  pregunta3.hacerPregunta();
-  mostrarPuntajeTotal();
+  function jugar() {
+    indiceAlAzar = numAleatorio(0,arrayDePreguntas.length);
+    preguntaElegida = arrayDePreguntas[indiceAlAzar];
+    preguntaElegida.hacerPregunta();
+  }
+
+  //mostrarPuntajeTotal();
