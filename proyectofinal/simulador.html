@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+        <!-- <link rel="stylesheet" href="myProjects/webProject/icofont/css/icofont.min.css"> -->
+        <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="simulador.css">
+
+  </head>
+  <body>
+    <div class="titular"  style="font-family: Arial">
+      <h1>
+        RANDOM, el juego
+      </h1>
+      <h3>Si no lo intentas, jamás lo conseguirás.</h3>
+      <!-- <img id="animacionTitular" src="./imgs/random1.gif" alt=""> -->
+
+    </div>
+
+    <div class="pregunta" id="contenedorPregunta">
+
+          <ul className="icofont-ul" style="list-style-type: none; text-align: center">
+              <li>
+                <span class="" id="idSpanIconoCategoria"></span>
+                <span class="classCategoria" id="idCategoria"></span>
+              </li>
+          </ul>
+
+          <div class="enunciado" id="idEnunciado"></div>
+
+          <div class="columnas">
+              <div class="imgPregunta"><img src="" alt="" id="imagenPregunta"></div>
+
+              <div class="opcionesPreguntas" id="opcionesDeLasPreguntas">
+                  <div class="opcionPregunta" id="opcion1" onclick="evaluarRespuesta()"></div>
+                  <div class="opcionPregunta" id="opcion2" onclick="evaluarRespuesta()"></div>
+                  <div class="opcionPregunta" id="opcion3" onclick="evaluarRespuesta()"></div>
+                  <div class="opcionPregunta" id="opcion4" onclick="evaluarRespuesta()"></div>
+              </div>
+          </div>
+    </div>
+
+      <button type="button" id="idBotonHacerPregunta" onclick="hacerPregunta()">Hacer pregunta</button>
+
+
+    <script src="simulador.js"></script>
+  </body>
+</html>

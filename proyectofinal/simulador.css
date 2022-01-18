@@ -1,0 +1,141 @@
+body {
+  background-color: white;
+}
+#animacionTitular {
+  width: 40%;
+}
+.imgPortada{
+  margin-left: 320px;
+}
+.enunciado{
+  text-align: center;
+  font-family: fantasy;
+  font-size: 22px;
+  padding-top: 0px;
+}
+.classCategoria{
+  text-align: center;
+  font-family: fantasy;
+  font-size: 18px;
+  padding-top: 2px;
+  color: green;
+}
+
+#idSpanIconoCategoria {
+  color: green;
+}
+
+button#idBotonComenzar{
+  background-color: blue;
+  color: white;
+  width:120px;
+  border-radius: 5px;
+  border-width: 0px;
+  margin-left: 580px;
+  justify-content: center;
+  padding: 15px;
+  cursor: pointer;
+}
+button#idBotonComenzar a{
+  text-decoration: none;
+}
+:visited {
+  color:white;
+}
+
+button#idBotonHacerPregunta{
+  background-color: green;
+  color: white;
+  width:140px;
+  border-radius: 5px;
+  border-width: 0px;
+  margin-left: 600px;
+  justify-content: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.titular {
+  text-align: center;
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+.pregunta {
+  width: 600px;
+  height: 350px;
+  margin: auto;
+  margin-top: 10px;
+  border: dashed green 5px;
+  margin-bottom: 10px;
+  background-image: url('imgs/icono-para-patron-random.png');
+}
+
+.opcionesPreguntas{
+  margin-top: 20px;
+  margin-left: 20px;
+  justify-content: left;
+}
+
+.imgPregunta{
+  margin-left: 20px;
+  margin-top: 20px;
+
+}
+
+#imagenPregunta {
+  max-width: 280px;
+  max-height: 220px;
+  border: solid black 2px;
+}
+
+.opcionPregunta {
+  width: 250px;
+  height: 30px;
+  border: solid #4b4747;
+  border-width: thin;
+  border-radius: 5px;
+  padding: 10px;
+  color: #4b4747;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.opcionPregunta#opcion1 {
+  background-color: #f7f4c7;
+}
+.opcionPregunta#opcion2 {
+  background-color: #dbf9dd;
+}
+.opcionPregunta#opcion3 {
+  background-color: #fadba0;
+}
+.opcionPregunta#opcion4 {
+  background-color: #99e9fb;
+}
+
+.opcionPregunta#opcion1:hover {
+background-color: #d4cccc;
+cursor: pointer;
+border-color: white;
+}
+
+.opcionPregunta#opcion2:hover {
+background-color: #d4cccc;
+cursor: pointer;
+border-color: white;
+}
+
+.opcionPregunta#opcion3:hover {
+background-color: #d4cccc;
+cursor: pointer;
+border-color: white;
+}
+
+.opcionPregunta#opcion4:hover {
+background-color: #d4cccc;
+cursor: pointer;
+border-color: white;
+}
