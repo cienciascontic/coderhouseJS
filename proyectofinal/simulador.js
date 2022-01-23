@@ -1,4 +1,3 @@
-let respuestaUsuario;
 let puntajeUsuario = 0;
 let respuestaCorrecta;
 let catNomCompleto;
@@ -15,7 +14,7 @@ function establecerTiempoDeJuego() {
 
 function comenzarJuego() {
   document.getElementById('contenedorPregunta').style.visibility = "visible";
-  setTimeout(controlDeTiempo, tiempoDisponible);
+  setTimeout(controlDeTiempo, tiempoDisponible*1000);
   hacerPregunta();
 }
 
@@ -37,7 +36,7 @@ class Pregunta {
     this.sinOpciones = true;
   }
 
-};// fin del constructor}
+}// fin del constructor}
 
 const bolsaDePreguntas = [];
 bolsaDePreguntas.push(new Pregunta(1,"HIS","https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Alexander_the_Great_mosaic.jpg/250px-Alexander_the_Great_mosaic.jpg","¿A qué le temía Bucéfalo?", ["A los rebencazos de su amo", "A los ratones", "A su sombra", "Al agua"], "opcion3"));
@@ -47,10 +46,6 @@ bolsaDePreguntas.push(new Pregunta(2,"TEC","https://upload.wikimedia.org/wikiped
 bolsaDePreguntas.push(new Pregunta(3,"DEP","https://cdn.pixabay.com/photo/2016/07/28/15/28/winner-1548239_1280.jpg","¿Cuál de estos deportes le otorgó más medallas olímpicas a la Argentina en toda su historia?", ["Hockey sobre césped", "Atletismo", "Tenis", "Boxeo"], "opcion4"));
 
 bolsaDePreguntas.push(new Pregunta(4,"TEC", "imgs/img-pregunta4.jpg", "¿Qué modelo es esta computadora?", ["Commodore 64", "Atari 130XE", "Talent MSX", "IBM PS 2"], "opcion2"));
-
-function mostrarPuntaje() {
-alert("Tu puntaje es: " + puntajeUsuario + " puntos");
-}
 
 function numeroAleatorio(min, max) {
    return Math.round(Math.random() * (max - min) + min);
@@ -83,7 +78,7 @@ if (claseAnterior != "") {
     iconoCategoria = "icofont-runner";
     break;
     default:
-  };
+  }
 
   document.getElementById("imagenPregunta").src = bolsaDePreguntas[indicePregunta].ayuda;
   document.getElementById("idEnunciado").innerHTML = bolsaDePreguntas[indicePregunta].enunciado;
@@ -117,6 +112,6 @@ else {
   puntajeUsuario --;
 }
 
-};
+}
 
 establecerTiempoDeJuego();
