@@ -4,17 +4,30 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="simulador.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="titular"  style="font-family: Arial">
-      <!-- <h1>
-        RANDOM, el juego
-      </h1>
-      <h3>Si no lo intentas, jamás lo conseguirás.</h3> -->
-    <img id="animacionTitular" src="./imgs/random1.gif" alt="">
+    <div class="claseContenedorPortada">
+            <img src="imgs/img-portada-1.jpg" class="claseImagenDeFondo" alt="">
+
+            <div class="divOndaGlowing"></div>
+
+            <div class="claseTitularPortada">
+              <div class="claseTituloPortada">RANDOM, el juego</div>
+              <div class="claseSubTituloPortada">¿Conocimiento o azar?</div>
+                <br><br><br>
+
+              <div id="idDivUsuario" style="text-align: center"></div>
+              <div id="idDivSaltoDeLinea"></div>
+              <div id="idDivClaseTiempo"></div>
+
+              <div class="claseBotonPortada" >
+                <button type="button" id="idBotonPortada">Comenzar</button>
+              </div>
+            </div>
     </div>
-    <img class="imgPortada" src="imgs/img-portada-1.png" alt="">
-      <button type="button" id="idBotonComenzar"><a href="simulador.html">Comenzar</a></button>
+<script src="index.js" charset="utf-8"></script>
+
 
   </body>
 </html>
