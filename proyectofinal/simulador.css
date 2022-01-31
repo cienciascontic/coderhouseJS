@@ -1,28 +1,143 @@
+
 body {
-  background-color: white;
+  margin: 0 auto;
+  background-image: url("imgs/img-portada-preguntas.jpg");
+  background-size: cover;
 }
-#animacionTitular {
-  width: 40%;
+
+.divOndaGlowing {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  box-shadow:
+  0 0 60px 30px #fff,
+  0 0 100px 60px brown,
+  0 0 140px 90px #fff;
 }
-.imgPortada{
-  margin-left: 320px;
+.claseContenedorPortada {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
 }
+
+.claseContenedorPreguntas {
+  align-items: center;
+  justify-content: center;
+  /* background-image: url("imgs/img-portada-preguntas.jpg"); */
+  /* background-size: cover; */
+}
+
+.claseImagenDeFondo {
+  filter: brightness(30%);
+  background-size: cover;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 60px 30px #fff,
+    0 0 100px 60px #f0f,
+    0 0 140px 90px #0ff;
+}
+
+.claseTitularPortada {
+color: white;
+position: absolute;
+text-align: center;
+}
+
+.titular {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#idTitulo {
+  font-family: fantasy;
+  font-size: 30px;
+  text-shadow: 3px 3px #C0898F;
+  color: white;
+}
+
+#idSubTitulo {
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+  color: orange;
+}
+
+.claseTituloPortada {
+  font-family: fantasy;
+  font-size: 55px;
+  text-shadow: 3px 3px #C0898F;
+}
+
+.claseSubTituloPortada {
+  font-family: monospace;
+  font-size: 30px;
+  padding-top: 10px;
+  color: #EDBF8D;
+}
+
+.claseBotonPortada {
+  margin-top: 30px;
+}
+
+#idDivUsuario {
+  font-family: monospace;
+  color: #EDD966;
+  text-shadow: 0.5px 0.5px #A28922;
+}
+
+#idDivClaseTiempo {
+  font-family: monospace;
+  color: #EDD966;
+  text-shadow: 0.5px 0.5px #A28922;
+}
+
+#idDivResultado {
+  text-align: center;
+  font-family: monospace;
+  color: #EDD966;
+  font-size: 20px;
+}
+
+#idBotonPortada {
+  width: 120px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: orange;
+  font-size: 18px;
+    opacity: 50%;
+  color: white;
+}
+
+#idBotonPortada:hover {
+  opacity: 90%;
+  cursor:pointer;
+}
+
 .enunciado{
   text-align: center;
-  font-family: fantasy;
+  font-family: monospace;
   font-size: 22px;
   padding-top: 0px;
+  color: white;
 }
-.classCategoria{
+.claseCategoria{
   text-align: center;
-  font-family: fantasy;
+  font-family: sans-serif;
   font-size: 18px;
   padding-top: 2px;
-  color: green;
+  color: #ECBE83;
 }
 
 #idSpanIconoCategoria {
-  color: green;
+  color: #ECBE83;
 }
 
 button#idBotonComenzar{
@@ -55,10 +170,6 @@ button#idBotonHacerPregunta{
   cursor: pointer;
 }
 
-.titular {
-  text-align: center;
-}
-
 .columnas {
   display: grid;
   grid-template-columns: 300px 300px;
@@ -68,9 +179,11 @@ button#idBotonHacerPregunta{
   height: 350px;
   margin: auto;
   margin-top: 10px;
-  border: dashed green 5px;
+  border-style: dashed solid;
+  border-color: #EEB935;
+  border-width: 4px;
   margin-bottom: 10px;
-  background-image: url('imgs/icono-para-patron-random.png');
+  background-color: rgb(136,74,1,0.5);
 }
 
 .opcionesPreguntas{
@@ -146,19 +259,45 @@ p {
 
 .claseCuadroDeHonor {
   justify-content: center;
+  text-align: center;
 }
 
 table {
-  margin-left: 450px;
+  margin-top: 10px;
+  margin-left: 480px;
   border-collapse: collapse;
   border-spacing: 0;
     }
 th {
       padding: 10px 20px;
-      border: 1px solid #000;
-      background-color: #E8F0FE;
+      border: 1px solid #fff;
+      background-color: #EEBA71; /* encabezado */
+      font-family: sans-serif;
     }
 td {
-      padding: 10px 20px;
-      border: 1px solid #000;
+      padding: 10px 10px;
+      border: 1px solid #fff;
+      background-color: #EECB49; /* filas */
+      font-family: monospace;
+      opacity: 70%;
     }
+  td#filaTiempo0 {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  td#filaUsuario0 {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  td#filaPuntaje0 {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+ul {
+  list-style-type: none;
+  text-align: center
+}
