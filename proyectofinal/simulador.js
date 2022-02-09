@@ -1,13 +1,12 @@
 /*jshint esversion: 6 */
-
-// window.onload = function() {
-//   comenzarJuego();
-// };
-
-//con jQuery
-$(document).ready(function() {
-  comenzarJuego();
-})
+let bolsaDePreguntas = [];
+$.ajax({
+  url: "preguntas.json",
+  dataType: "json",
+  success: function (respuesta) {
+    definirPreguntas(respuesta);
+  },
+});
 
 let puntajeUsuario = 0;
 let respuestaCorrecta;
@@ -19,15 +18,14 @@ let textoSetearTiempo;
 // para guardar los usuarios y sus puntajes en localStorage
 let todosLosUsuarios = [];
 let todosLosPuntajes = [];
-let bolsaDePreguntas = [];
 let tiempoDisponible;
 let nombreDeUsuario;
 
 function comenzarJuego() {
-  document.getElementById('contenedorPregunta').style.visibility = "visible";
+  $("#contenedorPregunta").show();
+  $("#idDivCuadroDeHonor").hide();
   recuperarUsuarios();
   establecerTiempo();
-  definirPreguntas();
   hacerPregunta();
 };
 
@@ -45,35 +43,10 @@ function establecerTiempo() {
   setTimeout(controlDeTiempo, tiempoDisponible*1000);
 };
 
-function definirPreguntas() {
-  class Pregunta {
-    constructor(idPregunta, categoria, ayuda, enunciado, opciones = [], opcionCorrecta) {
-      this.idPregunta = idPregunta;
-      this.categoria = categoria;
-      this.ayuda = ayuda;
-      this.enunciado = enunciado;
-      this.opciones = opciones;
-      this.opcionCorrecta = opcionCorrecta;
-      this.respondida = false;
-      this.sinOpciones = false;
-    }
-    responder() {
-      this.respondida = true;
-    }
-    sinOpciones() {
-      this.sinOpciones = true;
-    }
-
-  }// fin del constructor}
-
-  bolsaDePreguntas.push(new Pregunta(1,"HIS","https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Alexander_the_Great_mosaic.jpg/250px-Alexander_the_Great_mosaic.jpg","¿A qué le temía Bucéfalo?", ["A los rebencazos de su amo", "A los ratones", "A su sombra", "Al agua"], "opcion3"));
-
-  bolsaDePreguntas.push(new Pregunta(2,"TEC","https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/800px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg","¿Quién se apellida Torvalds?", ["El creador de Wikipedia", "El creador de Linux", "El creador de Twicth", "El creador del pendrive"], "opcion2"));
-
-  bolsaDePreguntas.push(new Pregunta(3,"DEP","https://cdn.pixabay.com/photo/2016/07/28/15/28/winner-1548239_1280.jpg","¿Cuál de estos deportes le otorgó más medallas olímpicas a la Argentina en toda su historia?", ["Hockey sobre césped", "Atletismo", "Tenis", "Boxeo"], "opcion4"));
-
-  bolsaDePreguntas.push(new Pregunta(4,"TEC", "imgs/img-pregunta4.jpg", "¿Qué modelo es esta computadora?", ["Commodore 64", "Atari 130XE", "Talent MSX", "IBM PS 2"], "opcion2"));
-};
+function definirPreguntas(respuesta) {
+  bolsaDePreguntas = respuesta;
+  comenzarJuego();
+}
 
 function hacerPregunta() {
   let cantPreguntas = bolsaDePreguntas.length;
@@ -92,11 +65,35 @@ function hacerPregunta() {
     catNomCompleto = "Deportes";
     iconoCategoria = '<i class="fas fa-running fa-2x"></i>';
     break;
+    case "GEO":
+    catNomCompleto = "Geografía";
+    iconoCategoria = '<i class="fas fa-globe fa-2x"></i>';
+    break;
+    case "CIE":
+    catNomCompleto = "Ciencias";
+    iconoCategoria = '<i class="fas fa-atom fa-2x"></i>';
+    break;
+    case "LIT":
+    catNomCompleto = "Literatura";
+    iconoCategoria = '<i class="fas fa-book-reader fa-2x"></i>';
+    break;
+    case "REL":
+    catNomCompleto = "Religión";
+    iconoCategoria = '<i class="fas fa-praying-hands fa-2x"></i>';
+    break;
+    case "MUS":
+    catNomCompleto = "Música";
+    iconoCategoria = '<i class="fas fa-compact-disc fa-2x"></i>';
+    break;
+    case "CTV":
+    catNomCompleto = "Cine y TV";
+    iconoCategoria = '<i class="fas fa-film fa-2x"></i>';
+    break;
     default:
   }
 
   document.getElementById("imagenPregunta").src = bolsaDePreguntas[indicePregunta].ayuda;
-  document.getElementById("idEnunciado").innerHTML = bolsaDePreguntas[indicePregunta].enunciado;
+  $("#idEnunciado").text(bolsaDePreguntas[indicePregunta].enunciado);
   // ícono de la categoría temática
   let divDeLaCategoriaTematica = document.getElementById("idDivCategoriaTematica");
   divDeLaCategoriaTematica.innerHTML = iconoCategoria + ' &nbsp &nbsp' + catNomCompleto;
@@ -104,7 +101,8 @@ function hacerPregunta() {
   let divDeLasOpciones = document.getElementById("opcionesDeLasPreguntas");
   divDeLasOpciones.innerHTML = "";
 
-  for (var i = 0; i < bolsaDePreguntas.length; i++) {
+  const cantOpciones = 4; //cantidad de opciones disponibles para cada pregunta
+  for (var i = 0; i < cantOpciones; i++) {
     let j = i + 1;
     let opcion = "opcion" + j;
 
@@ -127,7 +125,7 @@ function numeroAleatorio(min, max) {
 };
 
 function controlDeTiempo() {
-  document.getElementById('contenedorPregunta').style.visibility = "hidden";
+  $("#contenedorPregunta").hide();
   textoResultado = document.getElementById("idDivResultado");
   textoResultado.innerHTML = "Se agotó el tiempo " + nombreDeUsuario + ". Obtuviste: " + puntajeUsuario + " puntos";
 
@@ -149,7 +147,7 @@ tablaCuadroDeHonor.appendChild(encabezadoTablaCuadroDeHonor);
 tablaCuadroDeHonor.appendChild(cuerpoTablaCuadroDeHonor);
 
 // Agregar la tabla al div de cuadro de honor
-document.getElementById('idDivCuadroDeHonor').appendChild(tablaCuadroDeHonor);
+$("#idDivCuadroDeHonor").append(tablaCuadroDeHonor).fadeIn(3000);
 
 // Crear y agregar encabezados de la tabla
 let encabezado = document.createElement('tr');
@@ -169,7 +167,6 @@ encabezadoTablaCuadroDeHonor.appendChild(encabezado);
 for (var i = 0; i < usuariosDelCuadro.length; i++) {
 
     let fila = document.createElement('tr');
-    //fila.setAttribute('id', 'fila' + i);
     let filaUsuario = document.createElement('td');
     filaUsuario.setAttribute('id', 'filaUsuario' + i);
     filaUsuario.innerHTML = usuariosDelCuadroInvertidos[i];
@@ -194,6 +191,8 @@ for (var i = 0; i < usuariosDelCuadro.length; i++) {
 
     let primeraCeldaTiempo = document.getElementById('filaTiempo0');
     primeraCeldaTiempo.style.backgroundColor = "rgb(192,137,143,240)";
+
+    mostrarBotonVolverAJugar();
 
 }; // fin de función controlDeTiempo()
 
@@ -223,6 +222,20 @@ else {
   puntajeUsuario --;
 }
 setTimeout(hacerPregunta,tiempoParaVerLaRespuesta);
-}
+};
 
-//limpiarFondo();
+function mostrarBotonVolverAJugar() {
+  $("#idDivCuadroDeHonor").prepend("<button id='idBtnJugarDeNuevo'>Volver a jugar</button>");
+  $("#idBtnJugarDeNuevo").css({
+    "background-color": "#EECC47",
+    "border-radius": "5px",
+    "height": "40px",
+    "cursor": "pointer"
+  });
+
+  $("#idBtnJugarDeNuevo").click(function() {
+
+    location.href = "index.html";
+    });
+
+};

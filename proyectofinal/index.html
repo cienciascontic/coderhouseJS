@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="simulador.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
   <body>
     <div class="claseContenedorPortada">
@@ -12,9 +13,9 @@
 
             <div class="divOndaGlowing"></div>
 
-            <div class="claseTitularPortada">
-              <div class="claseTituloPortada">RANDOM, el juego</div>
-              <div class="claseSubTituloPortada">¿Conocimiento o azar?</div>
+            <div class="claseTitularPortada" id="idTitularPortada">
+              <div class="claseTituloPortada" id="idTituloPortada">RANDOM, el juego</div>
+              <div class="claseSubTituloPortada" id="idSubTituloPortada">¿Conocimiento o azar?</div>
                 <br><br><br>
 
               <div id="idDivUsuario" style="text-align: center"></div>
@@ -22,12 +23,12 @@
               <div id="idDivClaseTiempo"></div>
 
               <div class="claseBotonPortada" >
-                <button type="button" id="idBotonPortada">Comenzar</button>
+                <button type="button" id="idBotonPortada" hidden>Comenzar</button>
               </div>
             </div>
     </div>
+
+
 <script src="index.js" charset="utf-8"></script>
-
-
   </body>
 </html>

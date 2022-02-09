@@ -1,0 +1,82 @@
+[
+  {
+  "idPregunta":1,
+  "categoria":"HIS",
+  "ayuda":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Alexander_the_Great_mosaic.jpg/250px-Alexander_the_Great_mosaic.jpg",
+  "enunciado":"¿A qué le temía Bucéfalo?",
+  "opciones":["A los rebencazos de su amo","A los ratones","A su sombra","Al agua"],
+  "opcionCorrecta":"opcion3"
+  },
+    {
+    "idPregunta":2,
+    "categoria":"TEC",
+    "ayuda":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/800px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg",
+    "enunciado":"¿Quién se apellida Torvalds?",
+    "opciones":["El creador de Wikipedia","El creador de Linux","El creador de Twicth","El creador del pendrive"],
+    "opcionCorrecta":"opcion2"
+    },
+    {
+    "idPregunta":3,
+    "categoria":"DEP",
+    "ayuda":"https://cdn.pixabay.com/photo/2016/07/28/15/28/winner-1548239_1280.jpg",
+    "enunciado":"¿Cuál de estos deportes le otorgó más medallas olímpicas a la Argentina en toda su historia?",
+    "opciones":["Hockey sobre césped","Atletismo","Tenis","Boxeo"],
+    "opcionCorrecta":"opcion4"
+    },
+    {
+    "idPregunta":4,
+    "categoria":"GEO",
+    "ayuda":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Map-Latin_America.svg/1638px-Map-Latin_America.svg.png",
+    "enunciado":"¿Cuál es la ciudad más poblada de América Latina?",
+    "opciones":["Bogotá","Buenos Aires","San Pablo","Ciudad de México"],
+    "opcionCorrecta":"opcion3"
+    },
+    {
+    "idPregunta":5,
+    "categoria":"CIE",
+    "ayuda":"https://cienciascontic.org/simuladores/coderhouseJS/proyectofinal/imgs/celula-animal.png",
+    "enunciado":"¿Cuál de las siguientes NO es una parte de una célula animal?",
+    "opciones":["Mitocondria","Citoplasma","Peroxisoma","Cloroplasto"],
+    "opcionCorrecta":"opcion4"
+    },
+    {
+    "idPregunta":6,
+    "categoria":"LIT",
+    "ayuda":"https://cienciascontic.org/simuladores/coderhouseJS/proyectofinal/imgs/Hoffmeister_Borges_1965.jpg",
+    "enunciado":"¿Cuál de estos libros es obra de Jorge Luis Borges?",
+    "opciones":["El hacedor","Sobre héroes y tumbas","El juguete rabioso","La invención de Morel"],
+    "opcionCorrecta":"opcion1"
+    },
+    {
+    "idPregunta":7,
+    "categoria":"REL",
+    "ayuda":"https://cienciascontic.org/simuladores/coderhouseJS/proyectofinal/imgs/poseidon.jpg",
+    "enunciado":"¿Quién era el dios griego del mar?",
+    "opciones":["Neptuno","Poseidón","Atlantis","Nemo"],
+    "opcionCorrecta":"opcion2"
+    },
+    {
+    "idPregunta":8,
+    "categoria":"MUS",
+    "ayuda":"https://cienciascontic.org/simuladores/coderhouseJS/proyectofinal/imgs/charly.jpg",
+    "enunciado":"¿Cómo sigue la letra? Y escarbo hasta abrazarte y me sangran las manos...",
+    "opciones":["y rasguñas las piedras","pero qué libres vamos a crecer","y quiero amarte con toda mi piel","es que solo quiero despertarte"],
+    "opcionCorrecta":"opcion2"
+    },
+    {
+    "idPregunta":9,
+    "categoria":"CTV",
+    "ayuda":"https://cienciascontic.org/simuladores/coderhouseJS/proyectofinal/imgs/escena-pelicula.jpg",
+    "enunciado":"¿A qué película pertenece esta escena?",
+    "opciones":["El maestro de música","Escuela de rock","Whiplash","Fame"],
+    "opcionCorrecta":"opcion3"
+    },
+    {
+      "idPregunta":10,
+      "categoria":"TEC",
+      "ayuda":"imgs/img-pregunta4.jpg",
+      "enunciado":"¿Qué modelo es esta computadora?",
+      "opciones":["Commodore 64","Atari 130XE","Talent MSX","IBM PS 2"],
+      "opcionCorrecta":"opcion2"
+    }
+  ]

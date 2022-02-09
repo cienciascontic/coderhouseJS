@@ -1,9 +1,11 @@
 /*jshint esversion: 6 */
+
 let tiempoUsuario;
 let puntajeUsuario;
 let divUsuario = document.getElementById("idDivUsuario");
 
 function seteoInicial() {
+  animarTitulos();
   textoNombreDeUsuario();
   inputNombreDeUsuario();
   lineaEnBlancoDpsDeUsuario();
@@ -13,11 +15,28 @@ function seteoInicial() {
   seleccionarTiempoDeJuego();
 };
 
-function textoNombreDeUsuario () {
-  let textoUsuario = document.createElement("div");
-  textoUsuario.innerHTML = "Nombre del jugador";
-  textoUsuario.style.textAlign = "center";
-  divUsuario.appendChild(textoUsuario);
+function animarTitulos(){
+  $("#idTituloPortada").hide();
+  $("#idSubTituloPortada").hide();
+  $("#idDivUsuario").hide();
+  $("#idDivClaseTiempo").hide();
+  $("#idTituloPortada").fadeIn(4000, function() {
+    $("#idTituloPortada").animate({fontSize: '+=10px'}, "slow");
+    $("#idSubTituloPortada").fadeIn(2000, function() {
+      $("#idDivUsuario").slideUp(1000).slideDown(1000).fadeIn(1000, function() {
+        $("#idDivClaseTiempo").fadeIn(1000, function() {
+          $("#idBotonPortada").fadeIn(1000);
+        })
+      });
+    });
+  });
+
+};
+
+function textoNombreDeUsuario() {
+
+  $("#idDivUsuario").append("Nombre del jugador" + "<br>").css("text-align","center");
+
 };
 
 function inputNombreDeUsuario() {
@@ -67,11 +86,6 @@ function selectorTiempoDeJuego() {
   // input de tiempo de juego
   // con jQuery
   $("#idDelTextoDelTiempo").append("<select id='idSelectorTiempoDeJuego'></select>");
-  // let divPadreDelTiempo = document.getElementById("idDelTextoDelTiempo");
-  // let tiempoDeJuego = document.createElement("select");
-  // tiempoDeJuego.setAttribute("id", "idSelectorTiempoDeJuego");
-  // divPadreDelTiempo.appendChild(tiempoDeJuego);
-
 };
 
 function seleccionarTiempoDeJuego() { //cargar los tiempos en el "select".

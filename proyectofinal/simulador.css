@@ -30,8 +30,6 @@ body {
 .claseContenedorPreguntas {
   align-items: center;
   justify-content: center;
-  /* background-image: url("imgs/img-portada-preguntas.jpg"); */
-  /* background-size: cover; */
 }
 
 .claseImagenDeFondo {
@@ -132,7 +130,7 @@ text-align: center;
   text-align: center;
   font-family: sans-serif;
   font-size: 18px;
-  padding-top: 2px;
+  padding-top: 5px;
   color: #ECBE83;
 }
 
@@ -175,7 +173,7 @@ button#idBotonHacerPregunta{
   grid-template-columns: 300px 300px;
 }
 .pregunta {
-  width: 600px;
+  width: 640px;
   height: 350px;
   margin: auto;
   margin-top: 10px;
@@ -199,13 +197,13 @@ button#idBotonHacerPregunta{
 }
 
 #imagenPregunta {
-  max-width: 280px;
+  max-width: 270px;
   max-height: 220px;
-  border: solid black 2px;
+  border: solid white 2px;
 }
 
 .opcionPregunta {
-  width: 250px;
+  width: 280px;
   height: 30px;
   border: solid #4b4747;
   border-width: thin;
